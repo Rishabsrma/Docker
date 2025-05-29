@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { getTasks } from "@/lib/action";
+import Link from 'next/link';
+import { getTasks } from '@/lib/action';
 
 async function Home() {
   const allTasks = await getTasks();
@@ -8,7 +8,7 @@ async function Home() {
     return (
       <main className="p-8 bg-gray-100 min-h-screen">
         <section className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6">Registred Tasks</h1>
+          <h1 className="text-4xl font-bold mb-6">Registered Tasks</h1>
           <div className="text-gray-600 text-left w-full">
             <p>No tasks found.</p>
           </div>
@@ -21,12 +21,15 @@ async function Home() {
     <main className="p-8 bg-gray-100 min-h-screen">
       <section className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
-          <h1 className="text-4xl font-bold mb-6">Registred Tasks</h1>
-          <Link href="/create" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <h1 className="text-4xl font-bold mb-6">Registered Tasks</h1>
+          <Link
+            href="/create"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
             Create Task
           </Link>
         </div>
-      
+
         <div className="grid grid-cols-1 gap-6 mt-5">
           {allTasks?.length > 0 &&
             allTasks.map((task) => (
