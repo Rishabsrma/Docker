@@ -19,7 +19,9 @@ services:
           target: /app
           action: sync
     environment:
-      - DB_URL=mongodb+srv://sujata:rnZzJjIDr3bIDymV@cluster0.hnn88vs.mongodb.net/
+      - DB_URL=mongodb+srv://Docker:Z6AJYxYHICWT9D6p@mern-estate.ocpnjex.mongodb.net/Docker?retryWrites=true&w=majority&appName=mern-estate
+      # - DB_URL=mongodb+srv://sujata:rnZzJjIDr3bIDymV@cluster0.hnn88vs.mongodb.net/
+
       # we're using MongoDB atlas so we don't need to run a local instance of MongoDB
   # but if you want to run a local instance, you can do it this way
   # db:
